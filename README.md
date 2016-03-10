@@ -1,2 +1,3 @@
 # CiQL.github.io
-GitHub page
+
+This is my GitHub testing page. It probably won't be much, but it's home.
