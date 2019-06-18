@@ -6,7 +6,7 @@ body {
 	text-align: center;
 	font-family: sans-serif;
 }
-header {
+h1, h2 {
 	font-family: serif;
 }
 p {
