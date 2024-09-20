@@ -1,0 +1,52 @@
+:root {
+  --color-fg: #000;
+  --color-bg: #fff;
+  --color-al: #f00;
+  --color-av: color-mix(in srgb,var(--color-al),var(--color-fg));
+  --color-ah: color-mix(in srgb,var(--color-al),var(--color-bg));
+  --color-aa: color-mix(in srgb,var(--color-al),var(--color-fg) 30%);
+  color-scheme: light dark;
+}
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background: var(--color-bg);
+	color: var(--color-fg);
+	font-size: 1.15rem;
+	line-height: 1.4rem;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	width: 80vmin;
+	margin: 0 auto;
+}
+h1, h2 {
+	font-family: serif;
+}
+a, a:link { 
+	color: var(--color-al); 
+	text-decoration: none; 
+	border-bottom: 1px dashed var(--color-al); 
+}
+a:visited { 
+	color: var(--color-av);
+	border-bottom: 1px dashed var(--color-av); 
+}
+a:hover { 
+	color: var(--color-ah); 
+	border-bottom: 1px dashed var(--color-ah); 
+}
+a:active { 
+	color: var(--color-aa);
+	border-bottom: 1px solid transparent; 
+}
+::selection{background: #f00;color: #fff;}
+iframe{box-sizing:content-box}
+img,svg,video{max-width:100%;display:block;}
+@media print {:root{--color-bg:white;--color-fg:black;--color-al:black;}}
+@media (prefers-color-scheme: dark) {:root {--color-bg: #000;--color-fg: #fff;}}
